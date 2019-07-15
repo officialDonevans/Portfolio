@@ -1,223 +1,79 @@
+:root{
+  --primary-color: rgba(23, 32, 42, 0.75);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
 *{
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-@media screen and (max-width: 708px){
-.wrapper{
-	width:97%;
-	margin:0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 5px;
-	justify-content: space-between;
-}
-.side_container{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	order: 1;
-	align-items:center;
-	justify-content: space-between;
-}
-.side_box{
-	height: 80px;
-	width: 100%;
-
-}
-.side_box1{
-	margin-top:30px;
-	background-color: #02b3e4;
-}
-.side_box2{
-	margin-top:10px;
-	background-color: #2d3c49;
-}
-.side_box3{
-	margin-top:10px;
-	background-color: #7d97ad;
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+line-height: 1.4;
 }
 
-.main_container{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	order: 0;
-
+.container{
+  max-width: 960px;
+  margin:auto;
+  overflow: hidden;
+  padding: 0 3em;
 }
 
-.main_container >h2{
-	color: #7d97ad;
-}
-.logo{
-	width: 100%;
-	margin-bottom: 5px;
-	display: flex;
-	align-items: center;
-}
-.logo img{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin: 0 auto;
-}
-.name{
-	width: 100%;
-	text-align: center;
-	margin-bottom: 10px;
+.showcase{
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
 }
 
-.name>h1{
-	margin-top: 10px;
+.showcase:before{
+  content:'';
+  background: url('../img/keyboard.jpg')no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-hr{
-	width: 100%;
-	border-top: 4px solid #7d97ad;
-}
-.main_image img{
-	width: 100%;
-	height: 400px;
-	margin-top: 30px;
-	margin-bottom: 30px;
+.showcase .showcase-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }
 
-.bottom_container{
-	width: 100%;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.bottom_box{
-	text-align: center;
-	font-size: 1em;
-}
-.bottom_box1{
-	height: 200px;
-	width: 30%;
-}
-.bottom_box2{
-	height: 200px;
-	width: 30%;
-}
-.bottom_box3{
-	height: 200px;
-	width: 30%;
-}
-.client_logo{
-	width: 90%;
-	height: 90%;
+.showcase h1{
+  font-size: 2rem;
 }
 
-
+.showcase p{
+  font-size: 1.3rem;
 }
 
-
-
-@media screen and (min-width: 709px){
-.wrapper{
-	width:90%;
-	margin:0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 20px;
-	justify-content: space-between;
-}
-.side_container{
-	width: 20%;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 100px;
-	order: 0;
-}
-.side_box{
-	height: 80px;
-	width: 80px;
-	background-color: white;
-	margin-top: 20px;
-}
-.side_box1{
-	background-color: #02b3e4;
-}
-.side_box2{
-	background-color: #2d3c49;
-}
-.side_box3{
-	background-color: #7d97ad;
+.showcase img{
+  height: 200px;
+  border-radius: 50%;
 }
 
-.main_container{
-	width: 78%;
-	display: flex;
-	flex-wrap: wrap;
-	order: 1;
-}
-.main_container >h2{
-	color: #7d97ad;
-}
-.logo{
-	width: 50%;
-	margin-bottom: 10px;
-}
-.logo img{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin: 0 auto;
-}
-.name{
-	width: 50%;
-	text-align: right;
-	margin-bottom: 10px;
+.btn{
+  display: inline-block;
+  border: 1px solid white;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in;
 }
 
-.name>h1{
-	margin-top: 40px;
-}
-
-hr{
-	width: 100%;
-	border-top: 4px solid #7d97ad;
-}
-.main_image img{
-	width: 100%;
-	height: 400px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.bottom_container{
-	width: 100%;
-	margin-top: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.bottom_box{
-	text-align: center;
-	font-size: 1em;
-}
-.bottom_box1{
-	height: 200px;
-	width: 30%;
-}
-.bottom_box2{
-	height: 200px;
-	width: 30%;
-}
-.bottom_box3{
-	height: 200px;
-	width: 30%;
-}
-.client_logo{
-	width: 90%;
-	height: 90%;
-}
+.btn:hover{
+  background-color: #fff;
+  color:#000;
 }
